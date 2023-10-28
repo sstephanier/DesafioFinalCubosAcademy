@@ -19,9 +19,6 @@
 - Beekeeper
 
 
-
-
-
 ## Como Executar o Projeto
 
 - `npm init` ou `npm init -y` : inicia o package.json;
@@ -112,8 +109,8 @@ Essa é uma tarefa que deve ser realizada para disponibilizar a aplicação em u
 
 ## Integrantes do Grupo
 
-- Stephanie Rodrigues  - https://github.com/sstephanier
 - Leila Borges - https://github.com/leila-bwt
+- Stephanie Rodrigues  - https://github.com/sstephanier
 - Stephanie Feliciano - https://github.com/Stephanie-Feliciano
 - Sthefany Silva - https://github.com/sthefany0011
 - Glaudia Almeida - https://github.com/glaudiaalmeida
