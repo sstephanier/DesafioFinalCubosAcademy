@@ -1,3 +1,5 @@
+![](https://i.imgur.com/xG74tOh.png)
+
 # Projeto Módulo 5 - Backend
 
 <div align="center">
@@ -29,7 +31,9 @@
 
 ## Resumo das atividades realizadas 
 
-### Resumo Inicial das Sprints
+<details>
+<summary>1ª Sprint</summary>
+<br>
 
 Esta é a primeira sprint do projeto do PDV (Ponto de Venda) API, que consiste na criação de um sistema de frente de caixa. Nesta sprint, foram realizadas as seguintes tarefas:
 
@@ -79,7 +83,6 @@ O campo email no banco de dados deve ser único, evitando que dois usuários ten
 Efetuar Login do Usuário
 
 
-
 ### Rota: `POST /login`
 
 Essa rota possibilita que um usuário cadastrado faça o login no sistema. Os critérios de aceitação são os seguintes:
@@ -101,8 +104,49 @@ Editar Perfil do Usuário Logado
 
 Essa rota permite ao usuário logado editar as informações do seu perfil no sistema.
 
+</details>
 
-### Efetuar Deploy da Aplicação
+<details>
+<summary>2ª Sprint</summary>
+
+### Cadastrar Produto
+ - Descrição: Para cadastrar novos produtos.
+###  Editar Dados do Produto
+ - Descrição: Para permitir a edição de dados de um produto existente.
+### Listar Produtos
+ - Descrição: Lista todos os produtos cadastrados.
+###  Detalhar Produto
+ - Descrição: Fornece detalhes de um produto específico.
+###  Excluir Produto por ID
+ - Descrição: Para permitir a exclusão de um produto por seu ID.
+### Cadastrar Cliente
+ - Descrição: Para cadastrar novos clientes.
+###  Editar Dados do Cliente
+ - Descrição: Para permitir a edição de dados de um cliente existente.
+### Listar Clientes
+ - Descrição: Lista todos os clientes cadastrados.
+###  Detalhar Cliente
+Descrição: Fornece detalhes de um cliente específico.   
+</details>
+
+<details>
+<summary>3ª Sprint</summary>
+
+
+### Cadastrar Pedido
+ - Descrição: Para cadastrar novos pedidos.
+### Listar Pedidos
+ - Descrição: Lista todos os pedidos cadastrados.
+### Aplicar Validação na Exclusão de Produto
+ - Descrição: Valida se um produto está vinculado a um pedido em aberto antes de permitir a exclusão.
+### Aprimorar Cadastro/Atualização de Produto
+ - Descrição: Aprimora as operações de cadastro e atualização de produtos.
+### Aprimorar Exclusão de Produto
+ - Descrição: Aprimora a operação de exclusão de produtos para remover imagens vinculadas no servidor de armazenamento.
+
+</details>
+
+## Deploy da Aplicação
 
 Essa é uma tarefa que deve ser realizada para disponibilizar a aplicação em um ambiente de produção.
 - Link do Deploy: https://app.cyclic.sh/#/deploy/leila-bwt/EquipeLetsGoDesafioM05
@@ -115,3 +159,5 @@ Essa é uma tarefa que deve ser realizada para disponibilizar a aplicação em u
 - Sthefany Silva - https://github.com/sthefany0011
 - Glaudia Almeida - https://github.com/glaudiaalmeida
 
+
+###### tags: `back-end` `módulo 5` `nodeJS` `PostgreSQL` `API REST` `desafio`
