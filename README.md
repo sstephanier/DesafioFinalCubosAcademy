@@ -1,4 +1,4 @@
-# Desafio Módulo 5 - Backend
+# Projeto Módulo 5 - Backend
 
 <div align="center">
      <img src="https://github.com/leila-bwt/desafio-backend-m02-b2bt05/assets/108028195/c8c29bd0-c843-4cb8-9b20-9d1d8ed220b4" alt="javascript" height="50" width="40"/>&nbsp;
@@ -32,7 +32,7 @@
 
 ## Resumo das atividades realizadas 
 
-## 1ª Sprint
+## Resumo Inicial das Sprints
 
 Esta é a primeira sprint do projeto do PDV (Ponto de Venda) API, que consiste na criação de um sistema de frente de caixa. Nesta sprint, foram realizadas as seguintes tarefas:
 
@@ -112,8 +112,9 @@ Essa é uma tarefa que deve ser realizada para disponibilizar a aplicação em u
 
 ## Integrantes do Grupo
 
+- Stephanie Rodrigues  - https://github.com/sstephanier
 - Leila Borges - https://github.com/leila-bwt
 - Stephanie Feliciano - https://github.com/Stephanie-Feliciano
 - Sthefany Silva - https://github.com/sthefany0011
 - Glaudia Almeida - https://github.com/glaudiaalmeida
-- Stephanie Rodrigues  - https://github.com/sstephanier
+
