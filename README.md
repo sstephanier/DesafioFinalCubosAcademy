@@ -1,47 +1,117 @@
 # Desafio Módulo 5 - Backend
 
+## Recursos e Tecnologias Utilizadas
 
-Como entregar?
- Crie um repositório público no GitHub de algum membro de equipe
- Adicione os membros da equipe no repositório
- Enviei o link desse repositório na plataforma
-Descrição do desafio
-Seja bem vindo(a) ao desafio do módulo 5.
+- Node.js (versão: v18.14.1 )
+- npm (gerenciador de pacotes do Node.js)
+- Express.js
+- Nodemon
+- Insomnia
+- Postgres
+- Beekeeper
 
-Sua tarefa como desenvolvedor(a) será criar uma API para um PDV (Frente de Caixa). Esse será um projeto piloto, ou seja, no futuro outras funcionalidades serão implementadas.
 
-Importante 1: Sempre que a validação de uma requisição falhar, responda com código de erro e mensagem adequada à situação, ok?
 
-Importante 2: Para endpoints de cadastro/atualização os objetos de requisição devem conter as propriedades equivalentes as colunas das tabelas.
+<div align="center">
+     <img src="https://github.com/leila-bwt/desafio-backend-m02-b2bt05/assets/108028195/c8c29bd0-c843-4cb8-9b20-9d1d8ed220b4" alt="javascript" height="50" width="40"/>&nbsp;
+  <img src="https://github.com/leila-bwt/desafio-backend-m02-b2bt05/assets/108028195/190429a3-c73f-4511-acd5-81c587a98842" alt="node.js" height="45" width="40"/>&nbsp;
+  <img src="https://github.com/leila-bwt/desafio-backend-m02-b2bt05/assets/108028195/653d97ba-8b6a-4280-bf00-9d2b6a196374" alt="insomnia" height="40" width="40"/>&nbsp;
+  <img src="https://github.com/leila-bwt/DesafioII_API_REST_Cubos_Academi/assets/108028195/224daf50-36f6-457b-8d71-f80b3c6d0b96" alt="postgres" height="40" width="40"/>&nbsp;
+     <img src="https://github.com/leila-bwt/desafio-backend-m02-b2bt05/assets/108028195/defd1a31-c91f-4a01-927d-6a968ea4c5d0" alt="git" height="40" width="40"/>&nbsp;
+</div>
 
-Exemplo:
+## Como Executar o Projeto
 
-// Corpo da requisição para cadastro de usuário (body)
-{
-    "nome": "José",
-    "email": "jose@email.com",
-    "senha": "jose"
-}
-ATENÇÃO: Todos os endpoints deverão atender os requisitos citados acima.
+- `npm init` ou `npm init -y` : inicia o package.json;
+- `npm pg`: conexão com banco de dados PostgreSQL;
+- `.gitignore` : arquivos que serão ignorados durante o envio para o gitHub
 
-Banco de dados
-Você precisa criar um Banco de Dados PostgreSQL chamado pdv.
+- `npm run start` script ("node ./src/index.js") usado para chamar o nodemon que foi instalado com `npm install -D nodemon` para usar somente como depedência.
 
-IMPORTANTE: Deverá ser criado no projeto o arquivo SQL que deverá ser o script contendo os comandos de criação das tabelas respeitando os nomes das tabelas e colunas respectivamente, além de, conter os comandos para a inserção das categorias que devem ser previamente cadastradas (estão citadas na 1ª Sprint no item Listar Categorias).
+## Resumo das atividades realizadas 
 
-Requisitos obrigatórios
-A API a ser criada deverá acessar o banco de dados a ser criado pdv para persistir e manipular os dados de categorias, clientes, pedidos, produtos e usuários utilizados pela aplicação.
-O campo id das tabelas no banco de dados deve ser auto incremento, chave primária e não deve permitir edição uma vez criado.
-Qualquer valor monetário deverá ser representado em centavos (Ex.: R$ 10,00 reais = 1000)
-Status Codes
-Abaixo, listamos os possíveis status codes esperados como resposta da API.
+## 1ª Sprint
 
-// 200 (OK) = requisição bem sucedida
-// 201 (Created) = requisição bem sucedida e algo foi criado
-// 204 (No Content) = requisição bem sucedida, sem conteúdo no corpo da resposta
-// 400 (Bad Request) = o servidor não entendeu a requisição pois está com uma sintaxe/formato inválido
-// 401 (Unauthorized) = o usuário não está autenticado (logado)
-// 403 (Forbidden) = o usuário não tem permissão de acessar o recurso solicitado
-// 404 (Not Found) = o servidor não pode encontrar o recurso solicitado
-// 500 (Internal Server Error) = erro inesperado do servidor
-1ª Sprint
+Esta é a primeira sprint do projeto do PDV (Ponto de Venda) API, que consiste na criação de um sistema de frente de caixa. Nesta sprint, foram realizadas as seguintes tarefas:
+
+### Banco de Dados
+
+Foram criadas as seguintes tabelas e colunas no banco de dados:
+
+### Tabela usuarios:
+
+id (Chave primária)
+nome
+email (Deve ser único)
+senha
+
+### Tabela categorias:
+
+id (Chave primária)
+descricao
+
+
+Listar Categorias
+
+###  Rota: `GET /categoria`
+
+Essa rota permite ao usuário listar todas as categorias cadastradas no sistema. Para o correto funcionamento da rota, as seguintes categorias precisam ser previamente cadastradas no sistema:
+
+Informática
+Celulares
+Beleza e Perfumaria
+Mercado
+Livros e Papelaria
+Brinquedos
+Moda
+Bebê
+Games
+
+
+Cadastrar Usuário
+
+### Rota: `POST /usuario`
+
+Essa rota permite o cadastro de um novo usuário no sistema. Para que o cadastro seja bem-sucedido, são aplicados os seguintes critérios de aceitação:
+
+Validação dos campos obrigatórios: nome, email, senha.
+A senha é criptografada usando um algoritmo de criptografia confiável.
+O campo email no banco de dados deve ser único, evitando que dois usuários tenham o mesmo endereço de e-mail.
+Efetuar Login do Usuário
+
+
+
+### Rota: `POST /login`
+
+Essa rota possibilita que um usuário cadastrado faça o login no sistema. Os critérios de aceitação são os seguintes:
+
+Validação do e-mail e da senha para o usuário em questão.
+Geração de um token de autenticação para o usuário.
+A partir deste ponto, todas as funcionalidades (endpoints) requerem um token de autenticação do usuário logado, que deve ser enviado no header no formato Bearer Token. Portanto, em cada funcionalidade, a validação do token informado é necessária.
+
+
+
+Detalhar Perfil do Usuário Logado
+###  Rota: `GET /usuario`
+
+Essa rota permite ao usuário logado visualizar o seu perfil no sistema.
+
+
+Editar Perfil do Usuário Logado
+### Rota: `PUT /usuario`
+
+Essa rota permite ao usuário logado editar as informações do seu perfil no sistema.
+
+
+### Efetuar Deploy da Aplicação
+
+Essa é uma tarefa que deve ser realizada para disponibilizar a aplicação em um ambiente de produção.
+- Link do Deploy: https://app.cyclic.sh/#/deploy/leila-bwt/EquipeLetsGoDesafioM05
+
+## Integrantes do Grupo
+
+- Leila Borges - https://github.com/leila-bwt
+- Stephanie Feliciano - https://github.com/Stephanie-Feliciano
+- Sthefany Silva - https://github.com/sthefany0011
+- Glaudia Almeida - https://github.com/glaudiaalmeida
+- Stephanie Rodrigues  - https://github.com/sstephanier
