@@ -32,7 +32,7 @@
 
 ## Resumo das atividades realizadas 
 
-## Resumo Inicial das Sprints
+### Resumo Inicial das Sprints
 
 Esta é a primeira sprint do projeto do PDV (Ponto de Venda) API, que consiste na criação de um sistema de frente de caixa. Nesta sprint, foram realizadas as seguintes tarefas:
 
